@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horologia &ndash; Luxury Watch Collector &amp; Horology Timepiece Showcase</title>
+<meta name="description" content="Pre-owned luxury watches with movement-condition dossiers, box and papers provenance and macro photography. Built with HTML and CSS only.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#showcase">Skip to showcase</a>
+<header class="topbar">
+  <a class="brand" href="#top"><span class="logo" aria-hidden="true"></span>HOROLOGIA</a>
+  <nav class="nav" aria-label="Primary"><a href="#showcase">Showcase</a><a href="#verify">How we verify</a><label class="pill" for="slopen">&#9825; My Shortlist</label><button class="pill cart-btn jsonly" id="cartBtn" type="button">&#128722; Cart <span class="badge" id="cartCount">0</span></button></nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Luxury Watch Collector &amp; Horology Timepiece Showcase</p>
+      <h1>Know the movement<br>before you own the watch.</h1>
+      <p class="lead">Pre-owned Rolex, Omega, Tudor and Grand Seiko timepieces, each with a movement-condition dossier, box &amp; papers provenance tags and a zoomable photo gallery.</p>
+      <div class="hero-actions"><a class="btn btn-gold" href="#showcase">Browse timepieces</a><a class="btn btn-ghost" href="#verify">How verification works</a></div>
+      <ul class="stats"><li><strong>12</strong><span>Timepieces</span></li><li><strong>4</strong><span>Watch houses</span></li><li><strong>6</strong><span>Full sets</span></li><li><strong>19</strong><span>Real photos</span></li></ul>
+    </div>
+    <figure class="hero-art"><img src="img/p5.jpg" alt="Rolex GMT-Master II resting on its original green box"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_GMT_Master_II_-_16710_in_it_sitting_on_top_of_the_box.jpg">Peter WILSON</a>, CC BY-SA 4.0, via Wikimedia Commons</figcaption></figure>
+  </section>
+
+  <form class="shop" id="showcase" aria-label="Curated timepiece showcase">
+    <input class="ctl" type="radio" name="brand" id="b-all" checked><input class="ctl" type="radio" name="brand" id="b-rolex"><input class="ctl" type="radio" name="brand" id="b-omega"><input class="ctl" type="radio" name="brand" id="b-tudor"><input class="ctl" type="radio" name="brand" id="b-gs"><input class="ctl" type="checkbox" id="m-auto"><input class="ctl" type="checkbox" id="m-manual"><input class="ctl" type="checkbox" id="m-coax"><input class="ctl" type="checkbox" id="m-chrono"><input class="ctl" type="checkbox" id="m-spring"><input class="ctl" type="radio" name="mat" id="mat-all" checked><input class="ctl" type="radio" name="mat" id="mat-steel"><input class="ctl" type="radio" name="mat" id="mat-ti"><input class="ctl" type="radio" name="mat" id="mat-yg"><input class="ctl" type="radio" name="mat" id="mat-rg"><input class="ctl" type="radio" name="mat" id="mat-twotone"><input class="ctl" type="checkbox" id="c-date"><input class="ctl" type="checkbox" id="c-chronograph"><input class="ctl" type="checkbox" id="c-gmt"><input class="ctl" type="checkbox" id="c-tachy"><input class="ctl" type="checkbox" id="c-bezel"><input class="ctl" type="checkbox" id="c-pr"><input class="ctl" type="checkbox" id="c-time"><input class="ctl" type="checkbox" id="fullset"><input class="ctl" type="radio" name="sort" id="s-feat" checked><input class="ctl" type="radio" name="sort" id="s-pa"><input class="ctl" type="radio" name="sort" id="s-pd"><input class="ctl" type="radio" name="sort" id="s-acc"><input class="ctl" type="radio" name="sort" id="s-new"><input class="ctl" type="checkbox" id="ftoggle"><input class="ctl" type="checkbox" id="slopen"><input class="ctl fav" type="checkbox" id="fav-sub"><input class="ctl fav" type="checkbox" id="fav-gmt-pepsi"><input class="ctl fav" type="checkbox" id="fav-gmt-16710"><input class="ctl fav" type="checkbox" id="fav-datejust"><input class="ctl fav" type="checkbox" id="fav-daytona"><input class="ctl fav" type="checkbox" id="fav-speedmaster"><input class="ctl fav" type="checkbox" id="fav-seamaster"><input class="ctl fav" type="checkbox" id="fav-constellation"><input class="ctl fav" type="checkbox" id="fav-bb-chrono"><input class="ctl fav" type="checkbox" id="fav-pelagos"><input class="ctl fav" type="checkbox" id="fav-snowflake"><input class="ctl fav" type="checkbox" id="fav-sbgw231">
+    <div class="section-head"><h2>Curated Timepiece Showcase</h2><p>Filter by brand, movement, case material and complications, then select a watch to open its dossier.</p></div>
+    <div class="toolbar">
+      <label class="btn btn-ghost filters-toggle" for="ftoggle">&#9776; Filters</label>
+      <label class="search jsonly"><span class="sr">Search watches</span><input id="search" type="search" placeholder="Search brand, model, reference, calibre&hellip;" autocomplete="off"></label>
+      <div class="sortbar" role="group" aria-label="Sort"><span>Sort:</span>
+        <label for="s-feat">Featured</label><label for="s-pa">Price &uarr;</label><label for="s-pd">Price &darr;</label><label for="s-acc">Best accuracy</label><label for="s-new">Newest</label></div>
+      <label class="pill-toggle" for="fullset"><span class="box check"></span>Full set only</label>
+      <button class="btn btn-ghost" type="reset">Reset all</button>
+    </div>
+    <div class="layout">
+      <aside class="filters" aria-label="Filters">
+        <div class="filters-head"><h3>Filters</h3><label class="close-filters" for="ftoggle">&#10005;</label></div>
+        
+        <fieldset class="facet"><legend>Brand</legend>
+          <label class="opt" for="b-all"><span class="box radio"></span>All brands<em>12</em></label>
+          <label class="opt" for="b-rolex"><span class="box radio"></span>Rolex<em>5</em></label><label class="opt" for="b-omega"><span class="box radio"></span>Omega<em>3</em></label><label class="opt" for="b-tudor"><span class="box radio"></span>Tudor<em>2</em></label><label class="opt" for="b-gs"><span class="box radio"></span>Grand Seiko<em>2</em></label></fieldset>
+        <fieldset class="facet"><legend>Movement</legend>
+          <label class="opt" for="m-auto"><span class="box check"></span>Automatic<em>9</em></label><label class="opt" for="m-manual"><span class="box check"></span>Manual Wind<em>2</em></label><label class="opt" for="m-coax"><span class="box check"></span>Co-Axial<em>1</em></label><label class="opt" for="m-chrono"><span class="box check"></span>Chronometer<em>9</em></label><label class="opt" for="m-spring"><span class="box check"></span>Spring Drive<em>1</em></label></fieldset>
+        <fieldset class="facet"><legend>Case Material</legend>
+          <label class="opt" for="mat-all"><span class="box radio"></span>All materials<em>12</em></label>
+          <label class="opt" for="mat-steel"><span class="box radio"></span>Stainless Steel<em>6</em></label><label class="opt" for="mat-ti"><span class="box radio"></span>Titanium<em>2</em></label><label class="opt" for="mat-yg"><span class="box radio"></span>Yellow Gold<em>1</em></label><label class="opt" for="mat-rg"><span class="box radio"></span>Rose Gold<em>1</em></label><label class="opt" for="mat-twotone"><span class="box radio"></span>Two-Tone<em>2</em></label></fieldset>
+        <fieldset class="facet"><legend>Complications</legend>
+          <label class="opt" for="c-date"><span class="box check"></span>Date<em>8</em></label><label class="opt" for="c-chronograph"><span class="box check"></span>Chronograph<em>3</em></label><label class="opt" for="c-gmt"><span class="box check"></span>GMT<em>2</em></label><label class="opt" for="c-tachy"><span class="box check"></span>Tachymeter<em>3</em></label><label class="opt" for="c-bezel"><span class="box check"></span>Rotating Bezel<em>5</em></label><label class="opt" for="c-pr"><span class="box check"></span>Power Reserve<em>1</em></label><label class="opt" for="c-time"><span class="box check"></span>Time Only<em>2</em></label></fieldset>
+        <p class="hint nojs">Ticking two movements or complications shows watches that have <em>both</em>.</p>
+        <p class="hint jsonly">Ticking two movements or complications shows watches that have <em>either</em>.</p>
+      </aside>
+      <div class="results">
+        <div class="results-bar"><div class="chips"><label class="chip ch-b-rolex" for="b-all">Rolex &#10005;</label><label class="chip ch-b-omega" for="b-all">Omega &#10005;</label><label class="chip ch-b-tudor" for="b-all">Tudor &#10005;</label><label class="chip ch-b-gs" for="b-all">Grand Seiko &#10005;</label><label class="chip ch-m-auto" for="m-auto">Automatic &#10005;</label><label class="chip ch-m-manual" for="m-manual">Manual Wind &#10005;</label><label class="chip ch-m-coax" for="m-coax">Co-Axial &#10005;</label><label class="chip ch-m-chrono" for="m-chrono">Chronometer &#10005;</label><label class="chip ch-m-spring" for="m-spring">Spring Drive &#10005;</label><label class="chip ch-mat-steel" for="mat-all">Stainless Steel &#10005;</label><label class="chip ch-mat-ti" for="mat-all">Titanium &#10005;</label><label class="chip ch-mat-yg" for="mat-all">Yellow Gold &#10005;</label><label class="chip ch-mat-rg" for="mat-all">Rose Gold &#10005;</label><label class="chip ch-mat-twotone" for="mat-all">Two-Tone &#10005;</label><label class="chip ch-c-date" for="c-date">Date &#10005;</label><label class="chip ch-c-chronograph" for="c-chronograph">Chronograph &#10005;</label><label class="chip ch-c-gmt" for="c-gmt">GMT &#10005;</label><label class="chip ch-c-tachy" for="c-tachy">Tachymeter &#10005;</label><label class="chip ch-c-bezel" for="c-bezel">Rotating Bezel &#10005;</label><label class="chip ch-c-pr" for="c-pr">Power Reserve &#10005;</label><label class="chip ch-c-time" for="c-time">Time Only &#10005;</label><label class="chip ch-fullset" for="fullset">Full set &#10005;</label></div></div>
+        <div class="grid">
+      <article class="card rolex mat-steel mv-auto mv-chrono c-date c-bezel full" style="--p:9;--a:6;--y:7" data-b="rolex" data-mat="steel" data-mv="auto chrono" data-comp="date bezel" data-full="1" data-price="1065000" data-q="rolex submariner date 16610 3135 stainless steel automatic chronometer date rotating bezel">
+        <a class="card-link" href="#w-sub" aria-label="Open the dossier for Rolex Submariner Date">
+          <span class="card-art"><img src="img/t0.jpg" alt="Rolex Submariner Date" loading="lazy"></span>
+          <span class="prov prov-full">Full Set</span>
+          <span class="card-body">
+            <span class="brand-line">Rolex</span>
+            <span class="card-title">Submariner Date</span>
+            <span class="meta">Ref. 16610 &middot; 2006 &middot; 40 mm Stainless Steel</span>
+            <span class="tags"><span class="tag">Automatic</span><span class="tag">Chronometer</span></span>
+            <span class="card-foot"><strong>₹10,65,000</strong><span class="acc ok">+1.6 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-sub" title="Add to My Shortlist"><span class="sr">Add Submariner Date to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="sub" title="Add to cart" aria-label="Add Submariner Date to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card rolex mat-steel mv-auto mv-chrono c-gmt c-date c-bezel full" style="--p:11;--a:2;--y:4" data-b="rolex" data-mat="steel" data-mv="auto chrono" data-comp="gmt date bezel" data-full="1" data-price="2150000" data-q="rolex gmt-master ii “pepsi” 126710blro 3285 stainless steel automatic chronometer gmt date rotating bezel">
+        <a class="card-link" href="#w-gmt-pepsi" aria-label="Open the dossier for Rolex GMT-Master II “Pepsi”">
+          <span class="card-art"><img src="img/t4.jpg" alt="Rolex GMT-Master II “Pepsi”" loading="lazy"></span>
+          <span class="prov prov-full">Full Set</span>
+          <span class="card-body">
+            <span class="brand-line">Rolex</span>
+            <span class="card-title">GMT-Master II “Pepsi”</span>
+            <span class="meta">Ref. 126710BLRO &middot; 2019 &middot; 40 mm Stainless Steel</span>
+            <span class="tags"><span class="tag">Automatic</span><span class="tag">Chronometer</span></span>
+            <span class="card-foot"><strong>₹21,50,000</strong><span class="acc ok">+0.8 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-gmt-pepsi" title="Add to My Shortlist"><span class="sr">Add GMT-Master II “Pepsi” to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="gmt-pepsi" title="Add to cart" aria-label="Add GMT-Master II “Pepsi” to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card rolex mat-steel mv-auto mv-chrono c-gmt c-date c-bezel full" style="--p:10;--a:3;--y:8" data-b="rolex" data-mat="steel" data-mv="auto chrono" data-comp="gmt date bezel" data-full="1" data-price="1180000" data-q="rolex gmt-master ii 16710 3186 stainless steel automatic chronometer gmt date rotating bezel">
+        <a class="card-link" href="#w-gmt-16710" aria-label="Open the dossier for Rolex GMT-Master II">
+          <span class="card-art"><img src="img/t29.jpg" alt="Rolex GMT-Master II" loading="lazy"></span>
+          <span class="prov prov-full">Full Set</span>
+          <span class="card-body">
+            <span class="brand-line">Rolex</span>
+            <span class="card-title">GMT-Master II</span>
+            <span class="meta">Ref. 16710 &middot; 2003 &middot; 40 mm Stainless Steel</span>
+            <span class="tags"><span class="tag">Automatic</span><span class="tag">Chronometer</span></span>
+            <span class="card-foot"><strong>₹11,80,000</strong><span class="acc ok">−1.1 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-gmt-16710" title="Add to My Shortlist"><span class="sr">Add GMT-Master II to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="gmt-16710" title="Add to cart" aria-label="Add GMT-Master II to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card rolex mat-twotone mv-auto mv-chrono c-date" style="--p:6;--a:10;--y:10" data-b="rolex" data-mat="twotone" data-mv="auto chrono" data-comp="date" data-full="0" data-price="545000" data-q="rolex datejust 36 two-tone 16013 3035 two-tone (steel and gold) automatic chronometer date">
+        <a class="card-link" href="#w-datejust" aria-label="Open the dossier for Rolex Datejust 36 Two-Tone">
+          <span class="card-art"><img src="img/t7.jpg" alt="Rolex Datejust 36 Two-Tone" loading="lazy"></span>
+          <span class="prov prov-low">Watch Only</span>
+          <span class="card-body">
+            <span class="brand-line">Rolex</span>
+            <span class="card-title">Datejust 36 Two-Tone</span>
+            <span class="meta">Ref. 16013 &middot; 1987 &middot; 36 mm Two-Tone (steel and gold)</span>
+            <span class="tags"><span class="tag">Automatic</span><span class="tag">Chronometer</span></span>
+            <span class="card-foot"><strong>₹5,45,000</strong><span class="acc warn">+3.4 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-datejust" title="Add to My Shortlist"><span class="sr">Add Datejust 36 Two-Tone to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="datejust" title="Add to cart" aria-label="Add Datejust 36 Two-Tone to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card rolex mat-yg mv-auto mv-chrono c-chronograph c-tachy" style="--p:12;--a:4;--y:9" data-b="rolex" data-mat="yg" data-mv="auto chrono" data-comp="chronograph tachy" data-full="0" data-price="3650000" data-q="rolex cosmograph daytona 16528 4030 18k yellow gold automatic chronometer chronograph tachymeter">
+        <a class="card-link" href="#w-daytona" aria-label="Open the dossier for Rolex Cosmograph Daytona">
+          <span class="card-art"><img src="img/t10.jpg" alt="Rolex Cosmograph Daytona" loading="lazy"></span>
+          <span class="prov prov-mid">Partial Set</span>
+          <span class="card-body">
+            <span class="brand-line">Rolex</span>
+            <span class="card-title">Cosmograph Daytona</span>
+            <span class="meta">Ref. 16528 &middot; 1996 &middot; 40 mm 18k Yellow Gold</span>
+            <span class="tags"><span class="tag">Automatic</span><span class="tag">Chronometer</span></span>
+            <span class="card-foot"><strong>₹36,50,000</strong><span class="acc ok">+1.2 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-daytona" title="Add to My Shortlist"><span class="sr">Add Cosmograph Daytona to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="daytona" title="Add to cart" aria-label="Add Cosmograph Daytona to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card omega mat-steel mv-manual c-chronograph c-tachy" style="--p:8;--a:11;--y:11" data-b="omega" data-mat="steel" data-mv="manual" data-comp="chronograph tachy" data-full="0" data-price="845000" data-q="omega speedmaster professional “pre-moon” 145.012 321 stainless steel manual wind chronograph tachymeter">
+        <a class="card-link" href="#w-speedmaster" aria-label="Open the dossier for Omega Speedmaster Professional “Pre-Moon”">
+          <span class="card-art"><img src="img/t13.jpg" alt="Omega Speedmaster Professional “Pre-Moon”" loading="lazy"></span>
+          <span class="prov prov-low">Watch Only</span>
+          <span class="card-body">
+            <span class="brand-line">Omega</span>
+            <span class="card-title">Speedmaster Professional “Pre-Moon”</span>
+            <span class="meta">Ref. 145.012 &middot; 1968 &middot; 42 mm Stainless Steel</span>
+            <span class="tags"><span class="tag">Manual Wind</span></span>
+            <span class="card-foot"><strong>₹8,45,000</strong><span class="acc ok">+4.2 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-speedmaster" title="Add to My Shortlist"><span class="sr">Add Speedmaster Professional “Pre-Moon” to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="speedmaster" title="Add to cart" aria-label="Add Speedmaster Professional “Pre-Moon” to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card omega mat-twotone mv-auto mv-coax mv-chrono c-date c-bezel full" style="--p:7;--a:8;--y:1" data-b="omega" data-mat="twotone" data-mv="auto coax chrono" data-comp="date bezel" data-full="1" data-price="745000" data-q="omega seamaster diver 300m 210.20.42.20.04.001 8800 two-tone (steel and sedna gold) automatic co-axial chronometer date rotating bezel">
+        <a class="card-link" href="#w-seamaster" aria-label="Open the dossier for Omega Seamaster Diver 300M">
+          <span class="card-art"><img src="img/t15.jpg" alt="Omega Seamaster Diver 300M" loading="lazy"></span>
+          <span class="prov prov-full">Full Set</span>
+          <span class="card-body">
+            <span class="brand-line">Omega</span>
+            <span class="card-title">Seamaster Diver 300M</span>
+            <span class="meta">Ref. 210.20.42.20.04.001 &middot; 2022 &middot; 42 mm Two-Tone (steel and Sedna gold)</span>
+            <span class="tags"><span class="tag">Automatic</span><span class="tag">Co-Axial</span><span class="tag">Chronometer</span></span>
+            <span class="card-foot"><strong>₹7,45,000</strong><span class="acc ok">+1.9 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-seamaster" title="Add to My Shortlist"><span class="sr">Add Seamaster Diver 300M to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="seamaster" title="Add to cart" aria-label="Add Seamaster Diver 300M to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card omega mat-rg mv-auto mv-chrono c-time" style="--p:3;--a:12;--y:12" data-b="omega" data-mat="rg" data-mv="auto chrono" data-comp="time" data-full="0" data-price="420000" data-q="omega constellation 2852 505 18k rose gold automatic chronometer time only">
+        <a class="card-link" href="#w-constellation" aria-label="Open the dossier for Omega Constellation">
+          <span class="card-art"><img src="img/t17.jpg" alt="Omega Constellation" loading="lazy"></span>
+          <span class="prov prov-low">Watch Only</span>
+          <span class="card-body">
+            <span class="brand-line">Omega</span>
+            <span class="card-title">Constellation</span>
+            <span class="meta">Ref. 2852 &middot; 1958 &middot; 35 mm 18k Rose Gold</span>
+            <span class="tags"><span class="tag">Automatic</span><span class="tag">Chronometer</span></span>
+            <span class="card-foot"><strong>₹4,20,000</strong><span class="acc warn">+5.5 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-constellation" title="Add to My Shortlist"><span class="sr">Add Constellation to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="constellation" title="Add to cart" aria-label="Add Constellation to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card tudor mat-steel mv-auto mv-chrono c-chronograph c-tachy c-date" style="--p:2;--a:9;--y:5" data-b="tudor" data-mat="steel" data-mv="auto chrono" data-comp="chronograph tachy date" data-full="0" data-price="395000" data-q="tudor black bay chrono 79350 mt5813 stainless steel automatic chronometer chronograph tachymeter date">
+        <a class="card-link" href="#w-bb-chrono" aria-label="Open the dossier for Tudor Black Bay Chrono">
+          <span class="card-art"><img src="img/t18.jpg" alt="Tudor Black Bay Chrono" loading="lazy"></span>
+          <span class="prov prov-mid">Partial Set</span>
+          <span class="card-body">
+            <span class="brand-line">Tudor</span>
+            <span class="card-title">Black Bay Chrono</span>
+            <span class="meta">Ref. 79350 &middot; 2018 &middot; 41 mm Stainless Steel</span>
+            <span class="tags"><span class="tag">Automatic</span><span class="tag">Chronometer</span></span>
+            <span class="card-foot"><strong>₹3,95,000</strong><span class="acc ok">+2.4 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-bb-chrono" title="Add to My Shortlist"><span class="sr">Add Black Bay Chrono to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="bb-chrono" title="Add to cart" aria-label="Add Black Bay Chrono to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card tudor mat-ti mv-auto mv-chrono c-date c-bezel" style="--p:4;--a:5;--y:2" data-b="tudor" data-mat="ti" data-mv="auto chrono" data-comp="date bezel" data-full="0" data-price="440000" data-q="tudor pelagos blue 25600tb mt5612 titanium automatic chronometer date rotating bezel">
+        <a class="card-link" href="#w-pelagos" aria-label="Open the dossier for Tudor Pelagos Blue">
+          <span class="card-art"><img src="img/t20.jpg" alt="Tudor Pelagos Blue" loading="lazy"></span>
+          <span class="prov prov-mid">Partial Set</span>
+          <span class="card-body">
+            <span class="brand-line">Tudor</span>
+            <span class="card-title">Pelagos Blue</span>
+            <span class="meta">Ref. 25600TB &middot; 2021 &middot; 42 mm Titanium</span>
+            <span class="tags"><span class="tag">Automatic</span><span class="tag">Chronometer</span></span>
+            <span class="card-foot"><strong>₹4,40,000</strong><span class="acc ok">−1.2 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-pelagos" title="Add to My Shortlist"><span class="sr">Add Pelagos Blue to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="pelagos" title="Add to cart" aria-label="Add Pelagos Blue to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card gs mat-ti mv-spring c-date c-pr full" style="--p:5;--a:1;--y:6" data-b="gs" data-mat="ti" data-mv="spring" data-comp="date pr" data-full="1" data-price="465000" data-q="grand seiko spring drive “snowflake” sbga011 9r65 titanium spring drive date power reserve">
+        <a class="card-link" href="#w-snowflake" aria-label="Open the dossier for Grand Seiko Spring Drive “Snowflake”">
+          <span class="card-art"><img src="img/t21.jpg" alt="Grand Seiko Spring Drive “Snowflake”" loading="lazy"></span>
+          <span class="prov prov-full">Full Set</span>
+          <span class="card-body">
+            <span class="brand-line">Grand Seiko</span>
+            <span class="card-title">Spring Drive “Snowflake”</span>
+            <span class="meta">Ref. SBGA011 &middot; 2012 &middot; 41 mm Titanium</span>
+            <span class="tags"><span class="tag">Spring Drive</span></span>
+            <span class="card-foot"><strong>₹4,65,000</strong><span class="acc ok">+0.4 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-snowflake" title="Add to My Shortlist"><span class="sr">Add Spring Drive “Snowflake” to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="snowflake" title="Add to cart" aria-label="Add Spring Drive “Snowflake” to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article>
+      <article class="card gs mat-steel mv-manual c-time full" style="--p:1;--a:7;--y:3" data-b="gs" data-mat="steel" data-mv="manual" data-comp="time" data-full="1" data-price="385000" data-q="grand seiko heritage manual-wind sbgw231 9s64 stainless steel manual wind time only">
+        <a class="card-link" href="#w-sbgw231" aria-label="Open the dossier for Grand Seiko Heritage Manual-Wind">
+          <span class="card-art"><img src="img/t22.jpg" alt="Grand Seiko Heritage Manual-Wind" loading="lazy"></span>
+          <span class="prov prov-full">Full Set</span>
+          <span class="card-body">
+            <span class="brand-line">Grand Seiko</span>
+            <span class="card-title">Heritage Manual-Wind</span>
+            <span class="meta">Ref. SBGW231 &middot; 2020 &middot; 37 mm Stainless Steel</span>
+            <span class="tags"><span class="tag">Manual Wind</span></span>
+            <span class="card-foot"><strong>₹3,85,000</strong><span class="acc ok">+1.6 s/day</span></span>
+          </span>
+        </a>
+        <label class="heart" for="fav-sbgw231" title="Add to My Shortlist"><span class="sr">Add Heritage Manual-Wind to shortlist</span></label>
+        <button class="cart-mini jsonly" type="button" data-add="sbgw231" title="Add to cart" aria-label="Add Heritage Manual-Wind to cart">&#128722;</button>
+        <span class="sold-badge">Reserved</span>
+      </article></div>
+        <p class="count-end"></p>
+        <div class="empty" id="empty" hidden><p>No timepieces match these filters.</p><button class="btn btn-gold" type="reset">Reset all</button></div>
+      </div>
+    </div>
+        <label class="sl-fab" for="slopen">&#9825; My Shortlist</label>
+    <aside class="shortlist" aria-label="My Shortlist">
+      <div class="sl-head"><h2>My Shortlist</h2><label for="slopen" class="close-sl">&#10005;</label></div>
+      <p class="sl-empty muted">Tap the &#9825; on any watch to add it here.</p>
+      <div class="sl-row r-sub"><img src="img/t0.jpg" alt=""><div><p class="brand-line">Rolex</p><strong>Submariner Date</strong>
+        <p class="muted small">Full Set &middot; ₹10,65,000</p><a href="#w-sub">View dossier</a> &middot; <label for="fav-sub" class="linkish">Remove</label></div></div><div class="sl-row r-gmt-pepsi"><img src="img/t4.jpg" alt=""><div><p class="brand-line">Rolex</p><strong>GMT-Master II “Pepsi”</strong>
+        <p class="muted small">Full Set &middot; ₹21,50,000</p><a href="#w-gmt-pepsi">View dossier</a> &middot; <label for="fav-gmt-pepsi" class="linkish">Remove</label></div></div><div class="sl-row r-gmt-16710"><img src="img/t29.jpg" alt=""><div><p class="brand-line">Rolex</p><strong>GMT-Master II</strong>
+        <p class="muted small">Full Set &middot; ₹11,80,000</p><a href="#w-gmt-16710">View dossier</a> &middot; <label for="fav-gmt-16710" class="linkish">Remove</label></div></div><div class="sl-row r-datejust"><img src="img/t7.jpg" alt=""><div><p class="brand-line">Rolex</p><strong>Datejust 36 Two-Tone</strong>
+        <p class="muted small">Watch Only &middot; ₹5,45,000</p><a href="#w-datejust">View dossier</a> &middot; <label for="fav-datejust" class="linkish">Remove</label></div></div><div class="sl-row r-daytona"><img src="img/t10.jpg" alt=""><div><p class="brand-line">Rolex</p><strong>Cosmograph Daytona</strong>
+        <p class="muted small">Partial Set &middot; ₹36,50,000</p><a href="#w-daytona">View dossier</a> &middot; <label for="fav-daytona" class="linkish">Remove</label></div></div><div class="sl-row r-speedmaster"><img src="img/t13.jpg" alt=""><div><p class="brand-line">Omega</p><strong>Speedmaster Professional “Pre-Moon”</strong>
+        <p class="muted small">Watch Only &middot; ₹8,45,000</p><a href="#w-speedmaster">View dossier</a> &middot; <label for="fav-speedmaster" class="linkish">Remove</label></div></div><div class="sl-row r-seamaster"><img src="img/t15.jpg" alt=""><div><p class="brand-line">Omega</p><strong>Seamaster Diver 300M</strong>
+        <p class="muted small">Full Set &middot; ₹7,45,000</p><a href="#w-seamaster">View dossier</a> &middot; <label for="fav-seamaster" class="linkish">Remove</label></div></div><div class="sl-row r-constellation"><img src="img/t17.jpg" alt=""><div><p class="brand-line">Omega</p><strong>Constellation</strong>
+        <p class="muted small">Watch Only &middot; ₹4,20,000</p><a href="#w-constellation">View dossier</a> &middot; <label for="fav-constellation" class="linkish">Remove</label></div></div><div class="sl-row r-bb-chrono"><img src="img/t18.jpg" alt=""><div><p class="brand-line">Tudor</p><strong>Black Bay Chrono</strong>
+        <p class="muted small">Partial Set &middot; ₹3,95,000</p><a href="#w-bb-chrono">View dossier</a> &middot; <label for="fav-bb-chrono" class="linkish">Remove</label></div></div><div class="sl-row r-pelagos"><img src="img/t20.jpg" alt=""><div><p class="brand-line">Tudor</p><strong>Pelagos Blue</strong>
+        <p class="muted small">Partial Set &middot; ₹4,40,000</p><a href="#w-pelagos">View dossier</a> &middot; <label for="fav-pelagos" class="linkish">Remove</label></div></div><div class="sl-row r-snowflake"><img src="img/t21.jpg" alt=""><div><p class="brand-line">Grand Seiko</p><strong>Spring Drive “Snowflake”</strong>
+        <p class="muted small">Full Set &middot; ₹4,65,000</p><a href="#w-snowflake">View dossier</a> &middot; <label for="fav-snowflake" class="linkish">Remove</label></div></div><div class="sl-row r-sbgw231"><img src="img/t22.jpg" alt=""><div><p class="brand-line">Grand Seiko</p><strong>Heritage Manual-Wind</strong>
+        <p class="muted small">Full Set &middot; ₹3,85,000</p><a href="#w-sbgw231">View dossier</a> &middot; <label for="fav-sbgw231" class="linkish">Remove</label></div></div>
+      <p class="sl-total jsonly"><span id="slCount">0 watches</span><strong id="slTotal">&#8377;0</strong></p>
+      <p class="muted small jsonly">Your shortlist and notes are saved in this browser.</p>
+    </aside>
+  </form>
+
+  <section id="verify" class="verify">
+    <div class="section-head"><h2>How every timepiece is verified</h2><p>Four checks sit behind each listing, so a collector can judge a watch without handling it.</p></div>
+    <div class="verify-grid">
+      <article><span class="num">01</span><h3>Movement test</h3><p>Rate in &plusmn; seconds per day, amplitude and beat error are measured on a timegrapher and compared with the maker&rsquo;s tolerance.</p></article>
+      <article><span class="num">02</span><h3>Condition grading</h3><p>Case, bezel, dial and crystal are each scored out of 10, with written notes on polishing and wear.</p></article>
+      <article><span class="num">03</span><h3>Box &amp; papers</h3><p>Original box, stamped warranty card and archive extract are tagged Verified or Not available.</p></article>
+      <article><span class="num">04</span><h3>Macro photography</h3><p>Front, macro, profile and caseback exhibition views, each viewable at up to 4&times; zoom.</p></article>
+    </div>
+  </section>
+
+</main>
+
+  <section class="dossier" id="w-sub" aria-label="Rolex Submariner Date dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Rolex</p><h2>Submariner Date</h2><p class="muted">Ref. 16610 &middot; 2006 &middot; Cal. 3135</p></div>
+        <div class="d-buy"><strong class="d-price">₹10,65,000</strong>
+          <div class="buy-row jsonly" data-buyrow="sub"><button class="btn btn-gold" type="button" data-buy="sub">Buy now</button><button class="btn btn-ghost" type="button" data-add="sub">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="sub" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-sub" id="sub-t-ov" checked><input class="tr t-co" type="radio" name="tab-sub" id="sub-t-co"><input class="tr t-pr" type="radio" name="tab-sub" id="sub-t-pr"><input class="tr t-ga" type="radio" name="tab-sub" id="sub-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="sub-t-ov" class="tl tl-ov">Overview</label><label for="sub-t-co" class="tl tl-co">Condition Dossier</label><label for="sub-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="sub-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p0.jpg" alt="Rolex Submariner Date" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_Submariner_Professional.JPG">Dr.K.</a>, CC BY-SA 3.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">The benchmark dive watch: black dial, unidirectional bezel and a self-winding chronometer movement, shown on its presentation cushion.</p><dl class="specs"><div><dt>Case</dt><dd>40 mm &middot; Stainless Steel</dd></div><div><dt>Movement</dt><dd>Automatic &middot; Chronometer</dd></div><div><dt>Calibre</dt><dd>3135</dd></div><div><dt>Power reserve</dt><dd>48 hours</dd></div><div><dt>Water resistance</dt><dd>300 m</dd></div><div><dt>Complications</dt><dd>Date, Rotating Bezel</dd></div><div><dt>Year</dt><dd>2006</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-full">Full Set</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-sub">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-sub" data-note="sub" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.0"></i></div><p class="score">9.0 <small>/ 10</small></p><p class="note">Original bevels on the lugs; light hairlines on the clasp.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.2"></i></div><p class="score">9.2 <small>/ 10</small></p><p class="note">Aluminium insert even, pip intact, crisp 120-click action.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.6"></i></div><p class="score">9.6 <small>/ 10</small></p><p class="note">Original dial, even lume plots, no moisture marks.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.3"></i></div><p class="score">9.3 <small>/ 10</small></p><p class="note">Sapphire clear; cyclops correctly aligned over the date.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">+1.6 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-2;--hi:2"></i><b class="mark" style="--v:1.6"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (-2 / +2 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>286&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:286"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.2 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.2"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>2006</b><span>Sold new with warranty</span></li><li><b>2021</b><span>Full service, gaskets replaced, pressure tested to 300 m</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-full"><div><p class="eyebrow">Provenance verdict</p><h3>Full Set</h3><p class="note">Original box, stamped warranty card and archive extract confirm the serial.</p></div>
+      <div class="ring" style="--p:100"><span>3/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag yes">&#10004; Verified</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-sub" id="sub-v1" checked><input class="vr v2" type="radio" name="view-sub" id="sub-v2"><input class="vr v3" type="radio" name="view-sub" id="sub-v3"><input class="zr z1" type="radio" name="zoom-sub" id="sub-z1" checked><input class="zr z2" type="radio" name="zoom-sub" id="sub-z2"><input class="zr z3" type="radio" name="zoom-sub" id="sub-z3"><input class="zr z4" type="radio" name="zoom-sub" id="sub-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="sub-z1">1&times;</label><label for="sub-z2">2&times;</label><label for="sub-z3">3&times;</label><label for="sub-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p0.jpg" alt="Front view on the presentation cushion" loading="lazy"></div>
+          <label class="vnav prev" for="sub-v3" title="Previous view">&#8249;</label><label class="vnav next" for="sub-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 3 &middot; Front</b> Front view on the presentation cushion<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_Submariner_Professional.JPG">Dr.K.</a>, CC BY-SA 3.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2"><div class="frame"><img src="img/p2.jpg" alt="Side profile: bezel, case flank and crown guard" loading="lazy"></div>
+          <label class="vnav prev" for="sub-v1" title="Previous view">&#8249;</label><label class="vnav next" for="sub-v3" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 3 &middot; Case profile</b> Side profile: bezel, case flank and crown guard<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Edge_view_of_Rolex_Submariner_Professional.JPG">Tasoskessaris</a>, CC BY-SA 3.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f3"><div class="frame"><img src="img/p1.jpg" alt="Solid steel caseback and Oyster bracelet clasp" loading="lazy"></div>
+          <label class="vnav prev" for="sub-v2" title="Previous view">&#8249;</label><label class="vnav next" for="sub-v1" title="Next view">&#8250;</label>
+          <figcaption><b>3 / 3 &middot; Caseback</b> Solid steel caseback and Oyster bracelet clasp<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Back_of_Rolex_Submariner_Professional.JPG">Dr.K.</a>, CC BY-SA 3.0, via Wikimedia Commons</span></figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="sub-v1"><img src="img/t0.jpg" alt="" loading="lazy"><span>Front</span></label><label class="thumb" for="sub-v2"><img src="img/t2.jpg" alt="" loading="lazy"><span>Case profile</span></label><label class="thumb" for="sub-v3"><img src="img/t1.jpg" alt="" loading="lazy"><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-gmt-pepsi" aria-label="Rolex GMT-Master II “Pepsi” dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Rolex</p><h2>GMT-Master II “Pepsi”</h2><p class="muted">Ref. 126710BLRO &middot; 2019 &middot; Cal. 3285</p></div>
+        <div class="d-buy"><strong class="d-price">₹21,50,000</strong>
+          <div class="buy-row jsonly" data-buyrow="gmt-pepsi"><button class="btn btn-gold" type="button" data-buy="gmt-pepsi">Buy now</button><button class="btn btn-ghost" type="button" data-add="gmt-pepsi">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="gmt-pepsi" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-gmt-pepsi" id="gmt-pepsi-t-ov" checked><input class="tr t-co" type="radio" name="tab-gmt-pepsi" id="gmt-pepsi-t-co"><input class="tr t-pr" type="radio" name="tab-gmt-pepsi" id="gmt-pepsi-t-pr"><input class="tr t-ga" type="radio" name="tab-gmt-pepsi" id="gmt-pepsi-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="gmt-pepsi-t-ov" class="tl tl-ov">Overview</label><label for="gmt-pepsi-t-co" class="tl tl-co">Condition Dossier</label><label for="gmt-pepsi-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="gmt-pepsi-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p4.jpg" alt="Rolex GMT-Master II “Pepsi”" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_GMT_Master_II_126710BLRO.jpg">Qubeek</a>, CC0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">A dual-time travel watch with the red-and-blue ceramic 24-hour bezel, photographed here with its lume glowing.</p><dl class="specs"><div><dt>Case</dt><dd>40 mm &middot; Stainless Steel</dd></div><div><dt>Movement</dt><dd>Automatic &middot; Chronometer</dd></div><div><dt>Calibre</dt><dd>3285</dd></div><div><dt>Power reserve</dt><dd>70 hours</dd></div><div><dt>Water resistance</dt><dd>100 m</dd></div><div><dt>Complications</dt><dd>GMT, Date, Rotating Bezel</dd></div><div><dt>Year</dt><dd>2019</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-full">Full Set</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-gmt-pepsi">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-gmt-pepsi" data-note="gmt-pepsi" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.5"></i></div><p class="score">9.5 <small>/ 10</small></p><p class="note">Near-new flanks; factory brushing on the lugs.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.7"></i></div><p class="score">9.7 <small>/ 10</small></p><p class="note">Cerachrom insert unchipped, numerals fully filled.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.8"></i></div><p class="score">9.8 <small>/ 10</small></p><p class="note">Pristine black dial; GMT hand aligned to the hour.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.6"></i></div><p class="score">9.6 <small>/ 10</small></p><p class="note">Flawless sapphire crystal.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">+0.8 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-2;--hi:2"></i><b class="mark" style="--v:0.8"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (-2 / +2 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>301&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:301"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.1 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.1"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>2019</b><span>Purchased new from an authorised dealer</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-full"><div><p class="eyebrow">Provenance verdict</p><h3>Full Set</h3><p class="note">Complete presentation set with travel pouch.</p></div>
+      <div class="ring" style="--p:100"><span>3/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag yes">&#10004; Verified</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-gmt-pepsi" id="gmt-pepsi-v1" checked><input class="vr v2" type="radio" name="view-gmt-pepsi" id="gmt-pepsi-v2"><input class="zr z1" type="radio" name="zoom-gmt-pepsi" id="gmt-pepsi-z1" checked><input class="zr z2" type="radio" name="zoom-gmt-pepsi" id="gmt-pepsi-z2"><input class="zr z3" type="radio" name="zoom-gmt-pepsi" id="gmt-pepsi-z3"><input class="zr z4" type="radio" name="zoom-gmt-pepsi" id="gmt-pepsi-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="gmt-pepsi-z1">1&times;</label><label for="gmt-pepsi-z2">2&times;</label><label for="gmt-pepsi-z3">3&times;</label><label for="gmt-pepsi-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p4.jpg" alt="Front view: luminous dial and two-colour ceramic bezel" loading="lazy"></div>
+          <label class="vnav prev" for="gmt-pepsi-v2" title="Previous view">&#8249;</label><label class="vnav next" for="gmt-pepsi-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 2 &middot; Front</b> Front view: luminous dial and two-colour ceramic bezel<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_GMT_Master_II_126710BLRO.jpg">Qubeek</a>, CC0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2 empty"><div class="frame noimg"><div><span class="big" aria-hidden="true">&#9737;</span><h4>Caseback exhibition view</h4>
+          <p>This seller has not uploaded caseback or movement photos yet. Ask for them before you buy: the movement should match calibre 3285.</p></div></div>
+          <label class="vnav prev" for="gmt-pepsi-v1" title="Previous view">&#8249;</label><label class="vnav next" for="gmt-pepsi-v1" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 2 &middot; Caseback</b> Photos requested from the seller</figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="gmt-pepsi-v1"><img src="img/t4.jpg" alt="" loading="lazy"><span>Front</span></label><label class="thumb" for="gmt-pepsi-v2"><span class="tbox">&#9737;</span><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-gmt-16710" aria-label="Rolex GMT-Master II dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Rolex</p><h2>GMT-Master II</h2><p class="muted">Ref. 16710 &middot; 2003 &middot; Cal. 3186</p></div>
+        <div class="d-buy"><strong class="d-price">₹11,80,000</strong>
+          <div class="buy-row jsonly" data-buyrow="gmt-16710"><button class="btn btn-gold" type="button" data-buy="gmt-16710">Buy now</button><button class="btn btn-ghost" type="button" data-add="gmt-16710">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="gmt-16710" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-gmt-16710" id="gmt-16710-t-ov" checked><input class="tr t-co" type="radio" name="tab-gmt-16710" id="gmt-16710-t-co"><input class="tr t-pr" type="radio" name="tab-gmt-16710" id="gmt-16710-t-pr"><input class="tr t-ga" type="radio" name="tab-gmt-16710" id="gmt-16710-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="gmt-16710-t-ov" class="tl tl-ov">Overview</label><label for="gmt-16710-t-co" class="tl tl-co">Condition Dossier</label><label for="gmt-16710-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="gmt-16710-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p29.jpg" alt="Rolex GMT-Master II" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_GMT_Master_II_-_16710_(without_background).jpg">Peter WILSON (derivative by Pittigrilli)</a>, CC BY-SA 4.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">The classic aluminium-bezel GMT-Master II, offered as a full set and photographed on its original green box.</p><dl class="specs"><div><dt>Case</dt><dd>40 mm &middot; Stainless Steel</dd></div><div><dt>Movement</dt><dd>Automatic &middot; Chronometer</dd></div><div><dt>Calibre</dt><dd>3186</dd></div><div><dt>Power reserve</dt><dd>50 hours</dd></div><div><dt>Water resistance</dt><dd>100 m</dd></div><div><dt>Complications</dt><dd>GMT, Date, Rotating Bezel</dd></div><div><dt>Year</dt><dd>2003</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-full">Full Set</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-gmt-16710">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-gmt-16710" data-note="gmt-16710" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.8"></i></div><p class="score">8.8 <small>/ 10</small></p><p class="note">Polished once at service; lugs still full.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.9"></i></div><p class="score">8.9 <small>/ 10</small></p><p class="note">Black aluminium insert with light, even fading.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.4"></i></div><p class="score">9.4 <small>/ 10</small></p><p class="note">Original dial with matching hands.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.0"></i></div><p class="score">9.0 <small>/ 10</small></p><p class="note">Sapphire with fine hairlines under strong light.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">−1.1 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-2;--hi:2"></i><b class="mark" style="--v:-1.1"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (-2 / +2 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>278&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:278"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.3 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.3"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>2003</b><span>Sold new</span></li><li><b>2018</b><span>Full service and new crown tube</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-full"><div><p class="eyebrow">Provenance verdict</p><h3>Full Set</h3><p class="note">Original green box shown in the photos, plus warranty papers.</p></div>
+      <div class="ring" style="--p:100"><span>3/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag yes">&#10004; Verified</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-gmt-16710" id="gmt-16710-v1" checked><input class="vr v2" type="radio" name="view-gmt-16710" id="gmt-16710-v2"><input class="vr v3" type="radio" name="view-gmt-16710" id="gmt-16710-v3"><input class="zr z1" type="radio" name="zoom-gmt-16710" id="gmt-16710-z1" checked><input class="zr z2" type="radio" name="zoom-gmt-16710" id="gmt-16710-z2"><input class="zr z3" type="radio" name="zoom-gmt-16710" id="gmt-16710-z3"><input class="zr z4" type="radio" name="zoom-gmt-16710" id="gmt-16710-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="gmt-16710-z1">1&times;</label><label for="gmt-16710-z2">2&times;</label><label for="gmt-16710-z3">3&times;</label><label for="gmt-16710-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p29.jpg" alt="Front view of the 16710" loading="lazy"></div>
+          <label class="vnav prev" for="gmt-16710-v3" title="Previous view">&#8249;</label><label class="vnav next" for="gmt-16710-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 3 &middot; Front</b> Front view of the 16710<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_GMT_Master_II_-_16710_(without_background).jpg">Peter WILSON (derivative by Pittigrilli)</a>, CC BY-SA 4.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2"><div class="frame"><img src="img/p5.jpg" alt="The watch resting on its original Rolex box" loading="lazy"></div>
+          <label class="vnav prev" for="gmt-16710-v1" title="Previous view">&#8249;</label><label class="vnav next" for="gmt-16710-v3" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 3 &middot; On its box</b> The watch resting on its original Rolex box<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_GMT_Master_II_-_16710_in_it_sitting_on_top_of_the_box.jpg">Peter WILSON</a>, CC BY-SA 4.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f3 empty"><div class="frame noimg"><div><span class="big" aria-hidden="true">&#9737;</span><h4>Caseback exhibition view</h4>
+          <p>This seller has not uploaded caseback or movement photos yet. Ask for them before you buy: the movement should match calibre 3186.</p></div></div>
+          <label class="vnav prev" for="gmt-16710-v2" title="Previous view">&#8249;</label><label class="vnav next" for="gmt-16710-v1" title="Next view">&#8250;</label>
+          <figcaption><b>3 / 3 &middot; Caseback</b> Photos requested from the seller</figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="gmt-16710-v1"><img src="img/t29.jpg" alt="" loading="lazy"><span>Front</span></label><label class="thumb" for="gmt-16710-v2"><img src="img/t5.jpg" alt="" loading="lazy"><span>On its box</span></label><label class="thumb" for="gmt-16710-v3"><span class="tbox">&#9737;</span><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-datejust" aria-label="Rolex Datejust 36 Two-Tone dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Rolex</p><h2>Datejust 36 Two-Tone</h2><p class="muted">Ref. 16013 &middot; 1987 &middot; Cal. 3035</p></div>
+        <div class="d-buy"><strong class="d-price">₹5,45,000</strong>
+          <div class="buy-row jsonly" data-buyrow="datejust"><button class="btn btn-gold" type="button" data-buy="datejust">Buy now</button><button class="btn btn-ghost" type="button" data-add="datejust">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="datejust" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-datejust" id="datejust-t-ov" checked><input class="tr t-co" type="radio" name="tab-datejust" id="datejust-t-co"><input class="tr t-pr" type="radio" name="tab-datejust" id="datejust-t-pr"><input class="tr t-ga" type="radio" name="tab-datejust" id="datejust-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="datejust-t-ov" class="tl tl-ov">Overview</label><label for="datejust-t-co" class="tl tl-co">Condition Dossier</label><label for="datejust-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="datejust-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p7.jpg" alt="Rolex Datejust 36 Two-Tone" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_Datejust_16013.jpg">anna2005</a>, CC0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">The classic dress-sports Rolex in steel and yellow gold, with a fluted bezel, champagne dial and Jubilee bracelet.</p><dl class="specs"><div><dt>Case</dt><dd>36 mm &middot; Two-Tone (steel and gold)</dd></div><div><dt>Movement</dt><dd>Automatic &middot; Chronometer</dd></div><div><dt>Calibre</dt><dd>3035</dd></div><div><dt>Power reserve</dt><dd>42 hours</dd></div><div><dt>Water resistance</dt><dd>100 m</dd></div><div><dt>Complications</dt><dd>Date</dd></div><div><dt>Year</dt><dd>1987</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-low">Watch Only</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-datejust">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-datejust" data-note="datejust" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.4"></i></div><p class="score">8.4 <small>/ 10</small></p><p class="note">Normal wear for its age; one light polish.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.8"></i></div><p class="score">8.8 <small>/ 10</small></p><p class="note">Gold fluting slightly softened.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.0"></i></div><p class="score">9.0 <small>/ 10</small></p><p class="note">Champagne dial clean; applied markers aligned.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.7"></i></div><p class="score">8.7 <small>/ 10</small></p><p class="note">Hairlines visible at the edge of the crystal.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="warn">+3.4 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-2;--hi:2"></i><b class="mark" style="--v:3.4"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict warn">&#9888; Outside the factory tolerance (-2 / +2 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>262&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:262"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.6 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.6"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>1987</b><span>Sold new</span></li><li><b>2012</b><span>Service and bracelet stretch repair</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-low"><div><p class="eyebrow">Provenance verdict</p><h3>Watch Only</h3><p class="note">Warranty papers only; the original box is missing.</p></div>
+      <div class="ring" style="--p:33"><span>1/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card no"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag no">&#10006; Not available</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card no"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag no">&#10006; Not available</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-datejust" id="datejust-v1" checked><input class="vr v2" type="radio" name="view-datejust" id="datejust-v2"><input class="vr v3" type="radio" name="view-datejust" id="datejust-v3"><input class="zr z1" type="radio" name="zoom-datejust" id="datejust-z1" checked><input class="zr z2" type="radio" name="zoom-datejust" id="datejust-z2"><input class="zr z3" type="radio" name="zoom-datejust" id="datejust-z3"><input class="zr z4" type="radio" name="zoom-datejust" id="datejust-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="datejust-z1">1&times;</label><label for="datejust-z2">2&times;</label><label for="datejust-z3">3&times;</label><label for="datejust-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p7.jpg" alt="Front three-quarter view on the Jubilee bracelet" loading="lazy"></div>
+          <label class="vnav prev" for="datejust-v3" title="Previous view">&#8249;</label><label class="vnav next" for="datejust-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 3 &middot; Front</b> Front three-quarter view on the Jubilee bracelet<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_Datejust_16013.jpg">anna2005</a>, CC0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2"><div class="frame"><img src="img/p8.jpg" alt="Macro of the champagne dial and fluted bezel" loading="lazy"></div>
+          <label class="vnav prev" for="datejust-v1" title="Previous view">&#8249;</label><label class="vnav next" for="datejust-v3" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 3 &middot; Dial macro</b> Macro of the champagne dial and fluted bezel<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_Datejust_16013_close-up.webp">ErikaWittlieb</a>, CC0, via Wikimedia Commons</span></figcaption></figure><figure class="f f3 empty"><div class="frame noimg"><div><span class="big" aria-hidden="true">&#9737;</span><h4>Caseback exhibition view</h4>
+          <p>This seller has not uploaded caseback or movement photos yet. Ask for them before you buy: the movement should match calibre 3035.</p></div></div>
+          <label class="vnav prev" for="datejust-v2" title="Previous view">&#8249;</label><label class="vnav next" for="datejust-v1" title="Next view">&#8250;</label>
+          <figcaption><b>3 / 3 &middot; Caseback</b> Photos requested from the seller</figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="datejust-v1"><img src="img/t7.jpg" alt="" loading="lazy"><span>Front</span></label><label class="thumb" for="datejust-v2"><img src="img/t8.jpg" alt="" loading="lazy"><span>Dial macro</span></label><label class="thumb" for="datejust-v3"><span class="tbox">&#9737;</span><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-daytona" aria-label="Rolex Cosmograph Daytona dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Rolex</p><h2>Cosmograph Daytona</h2><p class="muted">Ref. 16528 &middot; 1996 &middot; Cal. 4030</p></div>
+        <div class="d-buy"><strong class="d-price">₹36,50,000</strong>
+          <div class="buy-row jsonly" data-buyrow="daytona"><button class="btn btn-gold" type="button" data-buy="daytona">Buy now</button><button class="btn btn-ghost" type="button" data-add="daytona">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="daytona" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-daytona" id="daytona-t-ov" checked><input class="tr t-co" type="radio" name="tab-daytona" id="daytona-t-co"><input class="tr t-pr" type="radio" name="tab-daytona" id="daytona-t-pr"><input class="tr t-ga" type="radio" name="tab-daytona" id="daytona-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="daytona-t-ov" class="tl tl-ov">Overview</label><label for="daytona-t-co" class="tl tl-co">Condition Dossier</label><label for="daytona-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="daytona-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p10.jpg" alt="Rolex Cosmograph Daytona" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Daytona_16528.jpg">Alesili</a>, CC BY-SA 3.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">A solid yellow-gold chronograph with a white diamond-set dial, black registers and an engraved tachymeter bezel.</p><dl class="specs"><div><dt>Case</dt><dd>40 mm &middot; 18k Yellow Gold</dd></div><div><dt>Movement</dt><dd>Automatic &middot; Chronometer</dd></div><div><dt>Calibre</dt><dd>4030</dd></div><div><dt>Power reserve</dt><dd>54 hours</dd></div><div><dt>Water resistance</dt><dd>100 m</dd></div><div><dt>Complications</dt><dd>Chronograph, Tachymeter</dd></div><div><dt>Year</dt><dd>1996</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-mid">Partial Set</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-daytona">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-daytona" data-note="daytona" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.1"></i></div><p class="score">9.1 <small>/ 10</small></p><p class="note">Gold shows soft edges; no dents.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.3"></i></div><p class="score">9.3 <small>/ 10</small></p><p class="note">Tachymeter scale crisp.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.7"></i></div><p class="score">9.7 <small>/ 10</small></p><p class="note">Diamond markers all present; registers clean.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.4"></i></div><p class="score">9.4 <small>/ 10</small></p><p class="note">Sapphire clear.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">+1.2 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-2;--hi:2"></i><b class="mark" style="--v:1.2"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (-2 / +2 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>274&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:274"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.3 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.3"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>1996</b><span>Sold new</span></li><li><b>2020</b><span>Chronograph service and pushers resealed</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-mid"><div><p class="eyebrow">Provenance verdict</p><h3>Partial Set</h3><p class="note">Box and stamped papers; no archive extract on file.</p></div>
+      <div class="ring" style="--p:67"><span>2/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card no"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag no">&#10006; Not available</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-daytona" id="daytona-v1" checked><input class="vr v2" type="radio" name="view-daytona" id="daytona-v2"><input class="vr v3" type="radio" name="view-daytona" id="daytona-v3"><input class="zr z1" type="radio" name="zoom-daytona" id="daytona-z1" checked><input class="zr z2" type="radio" name="zoom-daytona" id="daytona-z2"><input class="zr z3" type="radio" name="zoom-daytona" id="daytona-z3"><input class="zr z4" type="radio" name="zoom-daytona" id="daytona-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="daytona-z1">1&times;</label><label for="daytona-z2">2&times;</label><label for="daytona-z3">3&times;</label><label for="daytona-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p10.jpg" alt="Front view on the gold Oyster bracelet" loading="lazy"></div>
+          <label class="vnav prev" for="daytona-v3" title="Previous view">&#8249;</label><label class="vnav next" for="daytona-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 3 &middot; Front</b> Front view on the gold Oyster bracelet<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Daytona_16528.jpg">Alesili</a>, CC BY-SA 3.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2"><div class="frame"><img src="img/p11.jpg" alt="Macro of the 30-minute and 12-hour registers" loading="lazy"></div>
+          <label class="vnav prev" for="daytona-v1" title="Previous view">&#8249;</label><label class="vnav next" for="daytona-v3" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 3 &middot; Sub-dial macro</b> Macro of the 30-minute and 12-hour registers<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Two_sub-dials_of_Rolex_Daytona_chronograph_watch.jpg">Alesili</a>, CC BY-SA 3.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f3 empty"><div class="frame noimg"><div><span class="big" aria-hidden="true">&#9737;</span><h4>Caseback exhibition view</h4>
+          <p>This seller has not uploaded caseback or movement photos yet. Ask for them before you buy: the movement should match calibre 4030.</p></div></div>
+          <label class="vnav prev" for="daytona-v2" title="Previous view">&#8249;</label><label class="vnav next" for="daytona-v1" title="Next view">&#8250;</label>
+          <figcaption><b>3 / 3 &middot; Caseback</b> Photos requested from the seller</figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="daytona-v1"><img src="img/t10.jpg" alt="" loading="lazy"><span>Front</span></label><label class="thumb" for="daytona-v2"><img src="img/t11.jpg" alt="" loading="lazy"><span>Sub-dial macro</span></label><label class="thumb" for="daytona-v3"><span class="tbox">&#9737;</span><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-speedmaster" aria-label="Omega Speedmaster Professional “Pre-Moon” dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Omega</p><h2>Speedmaster Professional “Pre-Moon”</h2><p class="muted">Ref. 145.012 &middot; 1968 &middot; Cal. 321</p></div>
+        <div class="d-buy"><strong class="d-price">₹8,45,000</strong>
+          <div class="buy-row jsonly" data-buyrow="speedmaster"><button class="btn btn-gold" type="button" data-buy="speedmaster">Buy now</button><button class="btn btn-ghost" type="button" data-add="speedmaster">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="speedmaster" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-speedmaster" id="speedmaster-t-ov" checked><input class="tr t-co" type="radio" name="tab-speedmaster" id="speedmaster-t-co"><input class="tr t-pr" type="radio" name="tab-speedmaster" id="speedmaster-t-pr"><input class="tr t-ga" type="radio" name="tab-speedmaster" id="speedmaster-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="speedmaster-t-ov" class="tl tl-ov">Overview</label><label for="speedmaster-t-co" class="tl tl-co">Condition Dossier</label><label for="speedmaster-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="speedmaster-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p13.jpg" alt="Omega Speedmaster Professional “Pre-Moon”" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Vintage_Omega_Speedmaster_&quot;Pre-moon&quot;.jpg">Shane Lin</a>, CC BY-SA 2.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">A vintage hand-wound Speedmaster with the legendary Calibre 321 column-wheel chronograph, shown through a display back.</p><dl class="specs"><div><dt>Case</dt><dd>42 mm &middot; Stainless Steel</dd></div><div><dt>Movement</dt><dd>Manual Wind</dd></div><div><dt>Calibre</dt><dd>321</dd></div><div><dt>Power reserve</dt><dd>44 hours</dd></div><div><dt>Water resistance</dt><dd>30 m</dd></div><div><dt>Complications</dt><dd>Chronograph, Tachymeter</dd></div><div><dt>Year</dt><dd>1968</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-low">Watch Only</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-speedmaster">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-speedmaster" data-note="speedmaster" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.6"></i></div><p class="score">8.6 <small>/ 10</small></p><p class="note">Honest wear, unpolished lug tops.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.9"></i></div><p class="score">8.9 <small>/ 10</small></p><p class="note">Tachymeter bezel with light marks.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.2"></i></div><p class="score">9.2 <small>/ 10</small></p><p class="note">Step dial with even, aged lume.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.5"></i></div><p class="score">8.5 <small>/ 10</small></p><p class="note">Hesalite crystal with fine scratches.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">+4.2 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-1;--hi:11"></i><b class="mark" style="--v:4.2"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (-1 / +11 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>245&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:245"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.8 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.8"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>1968</b><span>Sold new</span></li><li><b>2015</b><span>Calibre 321 overhaul</span></li><li><b>2024</b><span>Rate regulation</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-low"><div><p class="eyebrow">Provenance verdict</p><h3>Watch Only</h3><p class="note">Omega extract of the archives only.</p></div>
+      <div class="ring" style="--p:33"><span>1/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card no"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag no">&#10006; Not available</span></div><div class="prov-card no"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag no">&#10006; Not available</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag yes">&#10004; Verified</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-speedmaster" id="speedmaster-v1" checked><input class="vr v2" type="radio" name="view-speedmaster" id="speedmaster-v2"><input class="zr z1" type="radio" name="zoom-speedmaster" id="speedmaster-z1" checked><input class="zr z2" type="radio" name="zoom-speedmaster" id="speedmaster-z2"><input class="zr z3" type="radio" name="zoom-speedmaster" id="speedmaster-z3"><input class="zr z4" type="radio" name="zoom-speedmaster" id="speedmaster-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="speedmaster-z1">1&times;</label><label for="speedmaster-z2">2&times;</label><label for="speedmaster-z3">3&times;</label><label for="speedmaster-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p13.jpg" alt="Front view: black step dial and tachymeter bezel" loading="lazy"></div>
+          <label class="vnav prev" for="speedmaster-v2" title="Previous view">&#8249;</label><label class="vnav next" for="speedmaster-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 2 &middot; Front</b> Front view: black step dial and tachymeter bezel<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Vintage_Omega_Speedmaster_&quot;Pre-moon&quot;.jpg">Shane Lin</a>, CC BY-SA 2.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2"><div class="frame"><img src="img/p14.jpg" alt="Calibre 321 chronograph movement seen through the caseback" loading="lazy"></div>
+          <label class="vnav prev" for="speedmaster-v1" title="Previous view">&#8249;</label><label class="vnav next" for="speedmaster-v1" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 2 &middot; Caseback exhibition</b> Calibre 321 chronograph movement seen through the caseback<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Omega_Cal._321_Chronograph_movement.jpg">Shane Lin</a>, CC BY-SA 2.0, via Wikimedia Commons</span></figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="speedmaster-v1"><img src="img/t13.jpg" alt="" loading="lazy"><span>Front</span></label><label class="thumb" for="speedmaster-v2"><img src="img/t14.jpg" alt="" loading="lazy"><span>Caseback exhibition</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-seamaster" aria-label="Omega Seamaster Diver 300M dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Omega</p><h2>Seamaster Diver 300M</h2><p class="muted">Ref. 210.20.42.20.04.001 &middot; 2022 &middot; Cal. 8800</p></div>
+        <div class="d-buy"><strong class="d-price">₹7,45,000</strong>
+          <div class="buy-row jsonly" data-buyrow="seamaster"><button class="btn btn-gold" type="button" data-buy="seamaster">Buy now</button><button class="btn btn-ghost" type="button" data-add="seamaster">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="seamaster" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-seamaster" id="seamaster-t-ov" checked><input class="tr t-co" type="radio" name="tab-seamaster" id="seamaster-t-co"><input class="tr t-pr" type="radio" name="tab-seamaster" id="seamaster-t-pr"><input class="tr t-ga" type="radio" name="tab-seamaster" id="seamaster-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="seamaster-t-ov" class="tl tl-ov">Overview</label><label for="seamaster-t-co" class="tl tl-co">Condition Dossier</label><label for="seamaster-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="seamaster-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p15.jpg" alt="Omega Seamaster Diver 300M" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Omega_Seamaster_Co-Axial.jpg">Saptarshi2005</a>, CC BY 4.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">A Co-Axial Master Chronometer dive watch with a white wave-pattern dial and a gold diving bezel, shown in a boutique display.</p><dl class="specs"><div><dt>Case</dt><dd>42 mm &middot; Two-Tone (steel and Sedna gold)</dd></div><div><dt>Movement</dt><dd>Automatic &middot; Co-Axial &middot; Chronometer</dd></div><div><dt>Calibre</dt><dd>8800</dd></div><div><dt>Power reserve</dt><dd>55 hours</dd></div><div><dt>Water resistance</dt><dd>300 m</dd></div><div><dt>Complications</dt><dd>Date, Rotating Bezel</dd></div><div><dt>Year</dt><dd>2022</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-full">Full Set</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-seamaster">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-seamaster" data-note="seamaster" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.6"></i></div><p class="score">9.6 <small>/ 10</small></p><p class="note">Unworn display piece.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.7"></i></div><p class="score">9.7 <small>/ 10</small></p><p class="note">Gold bezel unmarked.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.8"></i></div><p class="score">9.8 <small>/ 10</small></p><p class="note">Laser-engraved wave dial flawless.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.7"></i></div><p class="score">9.7 <small>/ 10</small></p><p class="note">Sapphire clear.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">+1.9 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:0;--hi:5"></i><b class="mark" style="--v:1.9"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (+0 / +5 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>305&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:305"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.1 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.1"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>2022</b><span>Boutique purchase</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-full"><div><p class="eyebrow">Provenance verdict</p><h3>Full Set</h3><p class="note">Full boutique set with hang tag.</p></div>
+      <div class="ring" style="--p:100"><span>3/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag yes">&#10004; Verified</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-seamaster" id="seamaster-v1" checked><input class="vr v2" type="radio" name="view-seamaster" id="seamaster-v2"><input class="zr z1" type="radio" name="zoom-seamaster" id="seamaster-z1" checked><input class="zr z2" type="radio" name="zoom-seamaster" id="seamaster-z2"><input class="zr z3" type="radio" name="zoom-seamaster" id="seamaster-z3"><input class="zr z4" type="radio" name="zoom-seamaster" id="seamaster-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="seamaster-z1">1&times;</label><label for="seamaster-z2">2&times;</label><label for="seamaster-z3">3&times;</label><label for="seamaster-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p15.jpg" alt="Front view in the boutique display" loading="lazy"></div>
+          <label class="vnav prev" for="seamaster-v2" title="Previous view">&#8249;</label><label class="vnav next" for="seamaster-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 2 &middot; Front</b> Front view in the boutique display<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Omega_Seamaster_Co-Axial.jpg">Saptarshi2005</a>, CC BY 4.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2 empty"><div class="frame noimg"><div><span class="big" aria-hidden="true">&#9737;</span><h4>Caseback exhibition view</h4>
+          <p>This seller has not uploaded caseback or movement photos yet. Ask for them before you buy: the movement should match calibre 8800.</p></div></div>
+          <label class="vnav prev" for="seamaster-v1" title="Previous view">&#8249;</label><label class="vnav next" for="seamaster-v1" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 2 &middot; Caseback</b> Photos requested from the seller</figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="seamaster-v1"><img src="img/t15.jpg" alt="" loading="lazy"><span>Front</span></label><label class="thumb" for="seamaster-v2"><span class="tbox">&#9737;</span><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-constellation" aria-label="Omega Constellation dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Omega</p><h2>Constellation</h2><p class="muted">Ref. 2852 &middot; 1958 &middot; Cal. 505</p></div>
+        <div class="d-buy"><strong class="d-price">₹4,20,000</strong>
+          <div class="buy-row jsonly" data-buyrow="constellation"><button class="btn btn-gold" type="button" data-buy="constellation">Buy now</button><button class="btn btn-ghost" type="button" data-add="constellation">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="constellation" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-constellation" id="constellation-t-ov" checked><input class="tr t-co" type="radio" name="tab-constellation" id="constellation-t-co"><input class="tr t-pr" type="radio" name="tab-constellation" id="constellation-t-pr"><input class="tr t-ga" type="radio" name="tab-constellation" id="constellation-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="constellation-t-ov" class="tl tl-ov">Overview</label><label for="constellation-t-co" class="tl tl-co">Condition Dossier</label><label for="constellation-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="constellation-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p17.jpg" alt="Omega Constellation" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Omega_Constellation_Rotgold_1958.jpg">Noop1958</a>, CC BY-SA 3.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">A 1950s rose-gold chronometer dress watch on black leather, from Omega&#x27;s flagship Constellation line.</p><dl class="specs"><div><dt>Case</dt><dd>35 mm &middot; 18k Rose Gold</dd></div><div><dt>Movement</dt><dd>Automatic &middot; Chronometer</dd></div><div><dt>Calibre</dt><dd>505</dd></div><div><dt>Power reserve</dt><dd>42 hours</dd></div><div><dt>Water resistance</dt><dd>Not water resistant</dd></div><div><dt>Complications</dt><dd>Time Only</dd></div><div><dt>Year</dt><dd>1958</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-low">Watch Only</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-constellation">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-constellation" data-note="constellation" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.2"></i></div><p class="score">8.2 <small>/ 10</small></p><p class="note">Gold case softened by decades of wear.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.5"></i></div><p class="score">8.5 <small>/ 10</small></p><p class="note">Smooth bezel with light dings.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-vg">Very Good</span></div>
+          <div class="bar"><i style="--s:8.9"></i></div><p class="score">8.9 <small>/ 10</small></p><p class="note">Original dial with gentle patina.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-good">Good</span></div>
+          <div class="bar"><i style="--s:8.0"></i></div><p class="score">8.0 <small>/ 10</small></p><p class="note">Acrylic crystal, polished.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="warn">+5.5 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-5;--hi:5"></i><b class="mark" style="--v:5.5"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict warn">&#9888; Outside the factory tolerance (-5 / +5 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>238&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:238"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>1.0 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:1.0"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>1958</b><span>Sold new</span></li><li><b>2019</b><span>Full service, new mainspring</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-low"><div><p class="eyebrow">Provenance verdict</p><h3>Watch Only</h3><p class="note">Watch only: no box or papers.</p></div>
+      <div class="ring" style="--p:0"><span>0/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card no"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag no">&#10006; Not available</span></div><div class="prov-card no"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag no">&#10006; Not available</span></div><div class="prov-card no"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag no">&#10006; Not available</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-constellation" id="constellation-v1" checked><input class="vr v2" type="radio" name="view-constellation" id="constellation-v2"><input class="zr z1" type="radio" name="zoom-constellation" id="constellation-z1" checked><input class="zr z2" type="radio" name="zoom-constellation" id="constellation-z2"><input class="zr z3" type="radio" name="zoom-constellation" id="constellation-z3"><input class="zr z4" type="radio" name="zoom-constellation" id="constellation-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="constellation-z1">1&times;</label><label for="constellation-z2">2&times;</label><label for="constellation-z3">3&times;</label><label for="constellation-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p17.jpg" alt="The rose-gold case on the wrist" loading="lazy"></div>
+          <label class="vnav prev" for="constellation-v2" title="Previous view">&#8249;</label><label class="vnav next" for="constellation-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 2 &middot; On the wrist</b> The rose-gold case on the wrist<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Omega_Constellation_Rotgold_1958.jpg">Noop1958</a>, CC BY-SA 3.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2 empty"><div class="frame noimg"><div><span class="big" aria-hidden="true">&#9737;</span><h4>Caseback exhibition view</h4>
+          <p>This seller has not uploaded caseback or movement photos yet. Ask for them before you buy: the movement should match calibre 505.</p></div></div>
+          <label class="vnav prev" for="constellation-v1" title="Previous view">&#8249;</label><label class="vnav next" for="constellation-v1" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 2 &middot; Caseback</b> Photos requested from the seller</figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="constellation-v1"><img src="img/t17.jpg" alt="" loading="lazy"><span>On the wrist</span></label><label class="thumb" for="constellation-v2"><span class="tbox">&#9737;</span><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-bb-chrono" aria-label="Tudor Black Bay Chrono dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Tudor</p><h2>Black Bay Chrono</h2><p class="muted">Ref. 79350 &middot; 2018 &middot; Cal. MT5813</p></div>
+        <div class="d-buy"><strong class="d-price">₹3,95,000</strong>
+          <div class="buy-row jsonly" data-buyrow="bb-chrono"><button class="btn btn-gold" type="button" data-buy="bb-chrono">Buy now</button><button class="btn btn-ghost" type="button" data-add="bb-chrono">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="bb-chrono" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-bb-chrono" id="bb-chrono-t-ov" checked><input class="tr t-co" type="radio" name="tab-bb-chrono" id="bb-chrono-t-co"><input class="tr t-pr" type="radio" name="tab-bb-chrono" id="bb-chrono-t-pr"><input class="tr t-ga" type="radio" name="tab-bb-chrono" id="bb-chrono-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="bb-chrono-t-ov" class="tl tl-ov">Overview</label><label for="bb-chrono-t-co" class="tl tl-co">Condition Dossier</label><label for="bb-chrono-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="bb-chrono-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p18.jpg" alt="Tudor Black Bay Chrono" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Tudor_Black_Bay_Chrono_ref._79350.jpg">EMore98</a>, CC BY-SA 4.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">A sporty steel chronograph with a black dial, tachymeter bezel and 70-hour power reserve.</p><dl class="specs"><div><dt>Case</dt><dd>41 mm &middot; Stainless Steel</dd></div><div><dt>Movement</dt><dd>Automatic &middot; Chronometer</dd></div><div><dt>Calibre</dt><dd>MT5813</dd></div><div><dt>Power reserve</dt><dd>70 hours</dd></div><div><dt>Water resistance</dt><dd>200 m</dd></div><div><dt>Complications</dt><dd>Chronograph, Tachymeter, Date</dd></div><div><dt>Year</dt><dd>2018</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-mid">Partial Set</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-bb-chrono">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-bb-chrono" data-note="bb-chrono" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.0"></i></div><p class="score">9.0 <small>/ 10</small></p><p class="note">Light desk-diving marks on the clasp.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.1"></i></div><p class="score">9.1 <small>/ 10</small></p><p class="note">Steel tachymeter bezel clean.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.5"></i></div><p class="score">9.5 <small>/ 10</small></p><p class="note">Matte black dial, registers sharp.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.2"></i></div><p class="score">9.2 <small>/ 10</small></p><p class="note">Sapphire, one micro-mark at 4 o&#x27;clock.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">+2.4 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-2;--hi:4"></i><b class="mark" style="--v:2.4"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (-2 / +4 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>289&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:289"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.2 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.2"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>2018</b><span>New from dealer</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-mid"><div><p class="eyebrow">Provenance verdict</p><h3>Partial Set</h3><p class="note">Box and stamped warranty card.</p></div>
+      <div class="ring" style="--p:67"><span>2/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card no"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag no">&#10006; Not available</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-bb-chrono" id="bb-chrono-v1" checked><input class="vr v2" type="radio" name="view-bb-chrono" id="bb-chrono-v2"><input class="zr z1" type="radio" name="zoom-bb-chrono" id="bb-chrono-z1" checked><input class="zr z2" type="radio" name="zoom-bb-chrono" id="bb-chrono-z2"><input class="zr z3" type="radio" name="zoom-bb-chrono" id="bb-chrono-z3"><input class="zr z4" type="radio" name="zoom-bb-chrono" id="bb-chrono-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="bb-chrono-z1">1&times;</label><label for="bb-chrono-z2">2&times;</label><label for="bb-chrono-z3">3&times;</label><label for="bb-chrono-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p18.jpg" alt="Front view on the wrist" loading="lazy"></div>
+          <label class="vnav prev" for="bb-chrono-v2" title="Previous view">&#8249;</label><label class="vnav next" for="bb-chrono-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 2 &middot; On the wrist</b> Front view on the wrist<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Tudor_Black_Bay_Chrono_ref._79350.jpg">EMore98</a>, CC BY-SA 4.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2 empty"><div class="frame noimg"><div><span class="big" aria-hidden="true">&#9737;</span><h4>Caseback exhibition view</h4>
+          <p>This seller has not uploaded caseback or movement photos yet. Ask for them before you buy: the movement should match calibre MT5813.</p></div></div>
+          <label class="vnav prev" for="bb-chrono-v1" title="Previous view">&#8249;</label><label class="vnav next" for="bb-chrono-v1" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 2 &middot; Caseback</b> Photos requested from the seller</figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="bb-chrono-v1"><img src="img/t18.jpg" alt="" loading="lazy"><span>On the wrist</span></label><label class="thumb" for="bb-chrono-v2"><span class="tbox">&#9737;</span><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-pelagos" aria-label="Tudor Pelagos Blue dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Tudor</p><h2>Pelagos Blue</h2><p class="muted">Ref. 25600TB &middot; 2021 &middot; Cal. MT5612</p></div>
+        <div class="d-buy"><strong class="d-price">₹4,40,000</strong>
+          <div class="buy-row jsonly" data-buyrow="pelagos"><button class="btn btn-gold" type="button" data-buy="pelagos">Buy now</button><button class="btn btn-ghost" type="button" data-add="pelagos">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="pelagos" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-pelagos" id="pelagos-t-ov" checked><input class="tr t-co" type="radio" name="tab-pelagos" id="pelagos-t-co"><input class="tr t-pr" type="radio" name="tab-pelagos" id="pelagos-t-pr"><input class="tr t-ga" type="radio" name="tab-pelagos" id="pelagos-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="pelagos-t-ov" class="tl tl-ov">Overview</label><label for="pelagos-t-co" class="tl tl-co">Condition Dossier</label><label for="pelagos-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="pelagos-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p20.jpg" alt="Tudor Pelagos Blue" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Tudor_Pelagos_for_Carolina_Watch_Club_Limited_Edition.jpg">OpaleHorse</a>, CC BY-SA 4.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">A lightweight titanium professional dive watch with a blue dial and ceramic bezel, in a limited edition for a watch club.</p><dl class="specs"><div><dt>Case</dt><dd>42 mm &middot; Titanium</dd></div><div><dt>Movement</dt><dd>Automatic &middot; Chronometer</dd></div><div><dt>Calibre</dt><dd>MT5612</dd></div><div><dt>Power reserve</dt><dd>70 hours</dd></div><div><dt>Water resistance</dt><dd>500 m</dd></div><div><dt>Complications</dt><dd>Date, Rotating Bezel</dd></div><div><dt>Year</dt><dd>2021</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-mid">Partial Set</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-pelagos">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-pelagos" data-note="pelagos" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.4"></i></div><p class="score">9.4 <small>/ 10</small></p><p class="note">Bead-blasted titanium with no marks.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.6"></i></div><p class="score">9.6 <small>/ 10</small></p><p class="note">Ceramic insert pristine.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.7"></i></div><p class="score">9.7 <small>/ 10</small></p><p class="note">Blue dial without dust or marks.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.5"></i></div><p class="score">9.5 <small>/ 10</small></p><p class="note">Flat sapphire, clear.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">−1.2 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-2;--hi:4"></i><b class="mark" style="--v:-1.2"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (-2 / +4 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>295&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:295"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.1 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.1"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>2021</b><span>Purchased new</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-mid"><div><p class="eyebrow">Provenance verdict</p><h3>Partial Set</h3><p class="note">Box and warranty card.</p></div>
+      <div class="ring" style="--p:67"><span>2/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card no"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag no">&#10006; Not available</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-pelagos" id="pelagos-v1" checked><input class="vr v2" type="radio" name="view-pelagos" id="pelagos-v2"><input class="zr z1" type="radio" name="zoom-pelagos" id="pelagos-z1" checked><input class="zr z2" type="radio" name="zoom-pelagos" id="pelagos-z2"><input class="zr z3" type="radio" name="zoom-pelagos" id="pelagos-z3"><input class="zr z4" type="radio" name="zoom-pelagos" id="pelagos-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="pelagos-z1">1&times;</label><label for="pelagos-z2">2&times;</label><label for="pelagos-z3">3&times;</label><label for="pelagos-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p20.jpg" alt="Front view of the blue dial and bezel" loading="lazy"></div>
+          <label class="vnav prev" for="pelagos-v2" title="Previous view">&#8249;</label><label class="vnav next" for="pelagos-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 2 &middot; Front</b> Front view of the blue dial and bezel<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Tudor_Pelagos_for_Carolina_Watch_Club_Limited_Edition.jpg">OpaleHorse</a>, CC BY-SA 4.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2 empty"><div class="frame noimg"><div><span class="big" aria-hidden="true">&#9737;</span><h4>Caseback exhibition view</h4>
+          <p>This seller has not uploaded caseback or movement photos yet. Ask for them before you buy: the movement should match calibre MT5612.</p></div></div>
+          <label class="vnav prev" for="pelagos-v1" title="Previous view">&#8249;</label><label class="vnav next" for="pelagos-v1" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 2 &middot; Caseback</b> Photos requested from the seller</figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="pelagos-v1"><img src="img/t20.jpg" alt="" loading="lazy"><span>Front</span></label><label class="thumb" for="pelagos-v2"><span class="tbox">&#9737;</span><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-snowflake" aria-label="Grand Seiko Spring Drive “Snowflake” dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Grand Seiko</p><h2>Spring Drive “Snowflake”</h2><p class="muted">Ref. SBGA011 &middot; 2012 &middot; Cal. 9R65</p></div>
+        <div class="d-buy"><strong class="d-price">₹4,65,000</strong>
+          <div class="buy-row jsonly" data-buyrow="snowflake"><button class="btn btn-gold" type="button" data-buy="snowflake">Buy now</button><button class="btn btn-ghost" type="button" data-add="snowflake">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="snowflake" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-snowflake" id="snowflake-t-ov" checked><input class="tr t-co" type="radio" name="tab-snowflake" id="snowflake-t-co"><input class="tr t-pr" type="radio" name="tab-snowflake" id="snowflake-t-pr"><input class="tr t-ga" type="radio" name="tab-snowflake" id="snowflake-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="snowflake-t-ov" class="tl tl-ov">Overview</label><label for="snowflake-t-co" class="tl tl-co">Condition Dossier</label><label for="snowflake-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="snowflake-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p21.jpg" alt="Grand Seiko Spring Drive “Snowflake”" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Grand_Seiko_SBGA011.jpg">Faustine seiko</a>, CC BY-SA 3.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">A Spring Drive icon with a textured white dial, a gliding seconds hand and a Zaratsu-polished titanium case.</p><dl class="specs"><div><dt>Case</dt><dd>41 mm &middot; Titanium</dd></div><div><dt>Movement</dt><dd>Spring Drive</dd></div><div><dt>Calibre</dt><dd>9R65</dd></div><div><dt>Power reserve</dt><dd>72 hours</dd></div><div><dt>Water resistance</dt><dd>100 m</dd></div><div><dt>Complications</dt><dd>Date, Power Reserve</dd></div><div><dt>Year</dt><dd>2012</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-full">Full Set</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-snowflake">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-snowflake" data-note="snowflake" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.3"></i></div><p class="score">9.3 <small>/ 10</small></p><p class="note">Mirror-polished surfaces sharp.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.5"></i></div><p class="score">9.5 <small>/ 10</small></p><p class="note">Thin polished bezel, no marks.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.9"></i></div><p class="score">9.9 <small>/ 10</small></p><p class="note">Snowflake texture uniform.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.6"></i></div><p class="score">9.6 <small>/ 10</small></p><p class="note">Dual-curved sapphire with coating intact.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">+0.4 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-1;--hi:1"></i><b class="mark" style="--v:0.4"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (-1 / +1 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude and beat error</span><strong>N/A</strong></div><p class="note">Spring Drive movements are regulated by a glide wheel, so there is no balance amplitude or beat error to measure.</p></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>2012</b><span>Purchased in Japan</span></li><li><b>2022</b><span>Spring Drive service</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-full"><div><p class="eyebrow">Provenance verdict</p><h3>Full Set</h3><p class="note">Box, warranty and Spring Drive certificate.</p></div>
+      <div class="ring" style="--p:100"><span>3/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag yes">&#10004; Verified</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-snowflake" id="snowflake-v1" checked><input class="vr v2" type="radio" name="view-snowflake" id="snowflake-v2"><input class="zr z1" type="radio" name="zoom-snowflake" id="snowflake-z1" checked><input class="zr z2" type="radio" name="zoom-snowflake" id="snowflake-z2"><input class="zr z3" type="radio" name="zoom-snowflake" id="snowflake-z3"><input class="zr z4" type="radio" name="zoom-snowflake" id="snowflake-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="snowflake-z1">1&times;</label><label for="snowflake-z2">2&times;</label><label for="snowflake-z3">3&times;</label><label for="snowflake-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p21.jpg" alt="Front view: white textured dial on the titanium bracelet" loading="lazy"></div>
+          <label class="vnav prev" for="snowflake-v2" title="Previous view">&#8249;</label><label class="vnav next" for="snowflake-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 2 &middot; Front</b> Front view: white textured dial on the titanium bracelet<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Grand_Seiko_SBGA011.jpg">Faustine seiko</a>, CC BY-SA 3.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2 empty"><div class="frame noimg"><div><span class="big" aria-hidden="true">&#9737;</span><h4>Caseback exhibition view</h4>
+          <p>This seller has not uploaded caseback or movement photos yet. Ask for them before you buy: the movement should match calibre 9R65.</p></div></div>
+          <label class="vnav prev" for="snowflake-v1" title="Previous view">&#8249;</label><label class="vnav next" for="snowflake-v1" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 2 &middot; Caseback</b> Photos requested from the seller</figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="snowflake-v1"><img src="img/t21.jpg" alt="" loading="lazy"><span>Front</span></label><label class="thumb" for="snowflake-v2"><span class="tbox">&#9737;</span><span>Caseback</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="dossier" id="w-sbgw231" aria-label="Grand Seiko Heritage Manual-Wind dossier">
+    <a class="backdrop" href="#showcase" aria-label="Close"></a>
+    <div class="sheet">
+      <a class="close" href="#showcase" aria-label="Close dossier">&#10005;</a>
+      <header class="d-head">
+        <div><p class="eyebrow">Grand Seiko</p><h2>Heritage Manual-Wind</h2><p class="muted">Ref. SBGW231 &middot; 2020 &middot; Cal. 9S64</p></div>
+        <div class="d-buy"><strong class="d-price">₹3,85,000</strong>
+          <div class="buy-row jsonly" data-buyrow="sbgw231"><button class="btn btn-gold" type="button" data-buy="sbgw231">Buy now</button><button class="btn btn-ghost" type="button" data-add="sbgw231">Add to cart</button></div>
+          <p class="reserved-note" data-reserved="sbgw231" hidden></p></div>
+      </header>
+      <input class="tr t-ov" type="radio" name="tab-sbgw231" id="sbgw231-t-ov" checked><input class="tr t-co" type="radio" name="tab-sbgw231" id="sbgw231-t-co"><input class="tr t-pr" type="radio" name="tab-sbgw231" id="sbgw231-t-pr"><input class="tr t-ga" type="radio" name="tab-sbgw231" id="sbgw231-t-ga">
+      <nav class="tabs" aria-label="Dossier sections"><label for="sbgw231-t-ov" class="tl tl-ov">Overview</label><label for="sbgw231-t-co" class="tl tl-co">Condition Dossier</label><label for="sbgw231-t-pr" class="tl tl-pr">Box &amp; Papers</label><label for="sbgw231-t-ga" class="tl tl-ga">Macro Gallery</label></nav>
+      <div class="panels">
+        <div class="panel p-ov"><div class="overview">
+          <figure class="ov-art"><img src="img/p22.jpg" alt="Grand Seiko Heritage Manual-Wind" loading="lazy"><figcaption class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Grand_Seiko_SBGW231_sideview.JPG">STSPP</a>, CC BY-SA 4.0, via Wikimedia Commons</figcaption></figure>
+          <div><p class="blurb">A compact, time-only hand-wound dress watch; its 9S64 movement can be admired through the sapphire caseback.</p><dl class="specs"><div><dt>Case</dt><dd>37 mm &middot; Stainless Steel</dd></div><div><dt>Movement</dt><dd>Manual Wind</dd></div><div><dt>Calibre</dt><dd>9S64</dd></div><div><dt>Power reserve</dt><dd>72 hours</dd></div><div><dt>Water resistance</dt><dd>30 m</dd></div><div><dt>Complications</dt><dd>Time Only</dd></div><div><dt>Year</dt><dd>2020</dd></div><div><dt>Provenance</dt><dd><span class="prov-inline prov-full">Full Set</span></dd></div></dl>
+          <div class="notes jsonly"><label for="note-sbgw231">Your collector notes <small>(saved in this browser)</small></label><textarea id="note-sbgw231" data-note="sbgw231" rows="3" placeholder="e.g. Ask the seller for the service invoice"></textarea></div></div></div></div>
+        <div class="panel p-co">
+          <h3 class="sec">Condition grading <small>case &middot; bezel &middot; dial &middot; crystal</small></h3>
+          <div class="cond-grid"><div class="cond"><div class="cond-top"><h4>Case</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.4"></i></div><p class="score">9.4 <small>/ 10</small></p><p class="note">Faceted lugs and polish intact.</p></div><div class="cond"><div class="cond-top"><h4>Bezel</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.5"></i></div><p class="score">9.5 <small>/ 10</small></p><p class="note">Slim bezel, no dings.</p></div><div class="cond"><div class="cond-top"><h4>Dial</h4><span class="grade g-mint">Mint</span></div>
+          <div class="bar"><i style="--s:9.6"></i></div><p class="score">9.6 <small>/ 10</small></p><p class="note">Cream dial even; markers aligned.</p></div><div class="cond"><div class="cond-top"><h4>Crystal</h4><span class="grade g-exc">Excellent</span></div>
+          <div class="bar"><i style="--s:9.4"></i></div><p class="score">9.4 <small>/ 10</small></p><p class="note">Box-style sapphire, edges clear.</p></div></div>
+          <h3 class="sec">Timing accuracy <small>measured on a timegrapher</small></h3>
+          <div class="timing"><div class="gauge main"><div class="g-head"><span>Rate (&plusmn; seconds per day)</span><strong class="ok">+1.6 s/day</strong></div>
+      <div class="scale"><i class="band" style="--lo:-3;--hi:5"></i><b class="mark" style="--v:1.6"></b></div>
+      <div class="ticks"><span>&minus;10 s</span><span>0</span><span>+10 s</span></div>
+      <p class="verdict ok">&#10004; Within the factory tolerance (-3 / +5 s per day)</p></div><div class="gauge"><div class="g-head"><span>Amplitude</span><strong>264&deg;</strong></div>
+          <div class="scale amp"><i class="band"></i><b class="mark" style="--v:264"></b></div><div class="ticks"><span>180&deg;</span><span>healthy 270&ndash;310&deg;</span><span>330&deg;</span></div></div>
+        <div class="gauge"><div class="g-head"><span>Beat error</span><strong>0.3 ms</strong></div>
+          <div class="scale beat"><i class="band"></i><b class="mark" style="--v:0.3"></b></div><div class="ticks"><span>0</span><span>good below 0.6 ms</span><span>2.0 ms</span></div></div></div>
+          <h3 class="sec">Service history</h3>
+          <ol class="timeline"><li><b>2020</b><span>Original purchase</span></li></ol>
+        </div>
+        <div class="panel p-pr"><div class="prov-summary prov-full"><div><p class="eyebrow">Provenance verdict</p><h3>Full Set</h3><p class="note">Box, warranty card and movement certificate.</p></div>
+      <div class="ring" style="--p:100"><span>3/3</span></div></div>
+      <div class="prov-grid"><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9635;</span><h4>Original Box</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#9998;</span><h4>Stamped Warranty Card</h4>
+        <span class="vtag yes">&#10004; Verified</span></div><div class="prov-card yes"><span class="icon" aria-hidden="true">&#10070;</span><h4>Archive Extract</h4>
+        <span class="vtag yes">&#10004; Verified</span></div></div></div>
+        <div class="panel p-ga"><input class="vr v1" type="radio" name="view-sbgw231" id="sbgw231-v1" checked><input class="vr v2" type="radio" name="view-sbgw231" id="sbgw231-v2"><input class="zr z1" type="radio" name="zoom-sbgw231" id="sbgw231-z1" checked><input class="zr z2" type="radio" name="zoom-sbgw231" id="sbgw231-z2"><input class="zr z3" type="radio" name="zoom-sbgw231" id="sbgw231-z3"><input class="zr z4" type="radio" name="zoom-sbgw231" id="sbgw231-z4">
+      <div class="gal">
+        <div class="stage-wrap">
+          <div class="zoombar"><span>Zoom</span><label for="sbgw231-z1">1&times;</label><label for="sbgw231-z2">2&times;</label><label for="sbgw231-z3">3&times;</label><label for="sbgw231-z4">4&times;</label><small>Scroll or drag inside the photo to pan when zoomed</small></div>
+          <div class="stage"><figure class="f f1"><div class="frame"><img src="img/p22.jpg" alt="Side profile: box-shaped crystal, crown and lugs" loading="lazy"></div>
+          <label class="vnav prev" for="sbgw231-v2" title="Previous view">&#8249;</label><label class="vnav next" for="sbgw231-v2" title="Next view">&#8250;</label>
+          <figcaption><b>1 / 2 &middot; Case profile</b> Side profile: box-shaped crystal, crown and lugs<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Grand_Seiko_SBGW231_sideview.JPG">STSPP</a>, CC BY-SA 4.0, via Wikimedia Commons</span></figcaption></figure><figure class="f f2"><div class="frame"><img src="img/p23.jpg" alt="Calibre 9S64 hand-wound movement through the sapphire caseback" loading="lazy"></div>
+          <label class="vnav prev" for="sbgw231-v1" title="Previous view">&#8249;</label><label class="vnav next" for="sbgw231-v1" title="Next view">&#8250;</label>
+          <figcaption><b>2 / 2 &middot; Caseback exhibition</b> Calibre 9S64 hand-wound movement through the sapphire caseback<span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Grand_Seiko_Caliber_9S64_Hand-wound.jpg">STSPP2</a>, CC BY-SA 4.0, via Wikimedia Commons</span></figcaption></figure></div>
+        </div>
+        <div class="thumbs"><label class="thumb" for="sbgw231-v1"><img src="img/t22.jpg" alt="" loading="lazy"><span>Case profile</span></label><label class="thumb" for="sbgw231-v2"><img src="img/t23.jpg" alt="" loading="lazy"><span>Caseback exhibition</span></label></div>
+      </div></div>
+      </div>
+    </div>
+  </section>
+<div class="overlay" id="overlay" hidden></div>
+<aside class="cart" id="cart" aria-label="Shopping cart" hidden>
+  <div class="sl-head"><h2>Your Cart</h2><button class="close-sl" type="button" data-close-cart aria-label="Close cart">&#10005;</button></div>
+  <div id="cartBody"></div>
+</aside>
+<div class="checkout" id="checkout" role="dialog" aria-modal="true" aria-labelledby="coTitle" hidden>
+  <div class="co-sheet">
+    <button class="close" type="button" data-close-co aria-label="Close checkout">&#10005;</button>
+    <div id="coForm">
+      <p class="eyebrow">Secure checkout</p><h2 id="coTitle">Reserve your timepiece</h2>
+      <div class="co-grid">
+        <form id="orderForm" novalidate>
+          <fieldset><legend>Your details</legend>
+            <label>Full name<input name="name" required autocomplete="name"></label>
+            <div class="two"><label>Email<input name="email" type="email" required autocomplete="email"></label>
+            <label>Mobile number<input name="phone" required inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit mobile" autocomplete="tel-national"></label></div>
+          </fieldset>
+          <fieldset><legend>Delivery</legend>
+            <label class="radio"><input type="radio" name="delivery" value="Insured courier" checked><span><b>Insured courier</b> &ndash; free, 3&ndash;5 days, signature on delivery</span></label>
+            <label class="radio"><input type="radio" name="delivery" value="Showroom pickup"><span><b>Collect from showroom</b> &ndash; inspect the watch before you pay</span></label>
+            <div class="addr"><label>Address<textarea name="address" rows="2" required autocomplete="street-address"></textarea></label>
+            <div class="two"><label>City<input name="city" required autocomplete="address-level2"></label><label>PIN code<input name="pin" required inputmode="numeric" pattern="[1-9][0-9]{5}" maxlength="6" autocomplete="postal-code"></label></div></div>
+          </fieldset>
+          <fieldset><legend>Payment</legend>
+            <label class="radio"><input type="radio" name="payment" value="Cash on delivery" checked><span><b>Cash on delivery</b></span></label>
+            <label class="radio"><input type="radio" name="payment" value="UPI on delivery"><span><b>UPI on delivery</b> &ndash; pay by UPI when the watch arrives</span></label>
+            <label class="radio"><input type="radio" name="payment" value="Bank transfer"><span><b>Bank transfer</b> &ndash; details sent after confirmation</span></label>
+          </fieldset>
+          <p class="form-error" id="formError" hidden>Please fill in the highlighted fields.</p>
+          <button class="btn btn-gold wide" type="submit">Place order</button>
+          <p class="demo-note">Demo store for a CSE326 project: no payment is taken and no real order is placed.</p>
+        </form>
+        <aside class="co-summary"><h3>Order summary</h3><div id="coItems"></div></aside>
+      </div>
+    </div>
+    <div id="coDone" hidden></div>
+  </div>
+</div>
+<footer class="footer">
+  <p><strong>HOROLOGIA</strong> &ndash; CSE326 academic project</p>
+  <p class="fine">Prices, serial details, condition scores and timing figures are illustrative sample data. Not affiliated with any watch manufacturer. Photographs are from Wikimedia Commons under the licences shown.</p>
+  <details class="credits"><summary>Photo credits</summary><ul><li>Rolex Submariner Professional &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_Submariner_Professional.JPG">Dr.K.</a>, CC BY-SA 3.0, via Wikimedia Commons</li><li>Back of Rolex Submariner Professional &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Back_of_Rolex_Submariner_Professional.JPG">Dr.K.</a>, CC BY-SA 3.0, via Wikimedia Commons</li><li>Edge view of Rolex Submariner Professional &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Edge_view_of_Rolex_Submariner_Professional.JPG">Tasoskessaris</a>, CC BY-SA 3.0, via Wikimedia Commons</li><li>Rolex GMT Master II 126710BLRO &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_GMT_Master_II_126710BLRO.jpg">Qubeek</a>, CC0, via Wikimedia Commons</li><li>Rolex GMT Master II - 16710 in it sitting on top of the box &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_GMT_Master_II_-_16710_in_it_sitting_on_top_of_the_box.jpg">Peter WILSON</a>, CC BY-SA 4.0, via Wikimedia Commons</li><li>Rolex Datejust 16013 &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_Datejust_16013.jpg">anna2005</a>, CC0, via Wikimedia Commons</li><li>Rolex Datejust 16013 close-up &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_Datejust_16013_close-up.webp">ErikaWittlieb</a>, CC0, via Wikimedia Commons</li><li>Daytona 16528 &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Daytona_16528.jpg">Alesili</a>, CC BY-SA 3.0, via Wikimedia Commons</li><li>Two sub-dials of Rolex Daytona chronograph watch &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Two_sub-dials_of_Rolex_Daytona_chronograph_watch.jpg">Alesili</a>, CC BY-SA 3.0, via Wikimedia Commons</li><li>Vintage Omega Speedmaster &quot;Pre-moon&quot; &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Vintage_Omega_Speedmaster_&quot;Pre-moon&quot;.jpg">Shane Lin</a>, CC BY-SA 2.0, via Wikimedia Commons</li><li>Omega Cal. 321 Chronograph movement &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Omega_Cal._321_Chronograph_movement.jpg">Shane Lin</a>, CC BY-SA 2.0, via Wikimedia Commons</li><li>Omega Seamaster Co-Axial &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Omega_Seamaster_Co-Axial.jpg">Saptarshi2005</a>, CC BY 4.0, via Wikimedia Commons</li><li>Omega Constellation Rotgold 1958 &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Omega_Constellation_Rotgold_1958.jpg">Noop1958</a>, CC BY-SA 3.0, via Wikimedia Commons</li><li>Tudor Black Bay Chrono ref. 79350 &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Tudor_Black_Bay_Chrono_ref._79350.jpg">EMore98</a>, CC BY-SA 4.0, via Wikimedia Commons</li><li>Tudor Pelagos for Carolina Watch Club Limited Edition &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Tudor_Pelagos_for_Carolina_Watch_Club_Limited_Edition.jpg">OpaleHorse</a>, CC BY-SA 4.0, via Wikimedia Commons</li><li>Grand Seiko SBGA011 &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Grand_Seiko_SBGA011.jpg">Faustine seiko</a>, CC BY-SA 3.0, via Wikimedia Commons</li><li>Grand Seiko SBGW231 sideview &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Grand_Seiko_SBGW231_sideview.JPG">STSPP</a>, CC BY-SA 4.0, via Wikimedia Commons</li><li>Grand Seiko Caliber 9S64 Hand-wound &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Grand_Seiko_Caliber_9S64_Hand-wound.jpg">STSPP2</a>, CC BY-SA 4.0, via Wikimedia Commons</li><li>Rolex GMT Master II - 16710 (without background) &ndash; Photo: <a href="https://commons.wikimedia.org/wiki/File:Rolex_GMT_Master_II_-_16710_(without_background).jpg">Peter WILSON (derivative by Pittigrilli)</a>, CC BY-SA 4.0, via Wikimedia Commons</li></ul></details>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
